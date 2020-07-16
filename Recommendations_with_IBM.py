@@ -677,8 +677,18 @@ t.sol_5_test(sol_5_dict)
 
 # `6.` If we were given a new user, which of the above functions would you be able to use to make recommendations?  Explain.  Can you think of a better way we might make recommendations?  Use the cell below to explain a better method for new users.
 
-# **Provide your response here.**
+"""
+**Provide your response here.**
 
+
+Since we have past user data, we can recommend top 'x' articles with the most user interactions for new users. There are two functions above for getting 'top articles'
+and 'top articles ids'. We can use both 'get_top_articles()' and 'get_top_articles_ids()' functions for recommend article for newcomers.
+
+We also can ask to user which fields are most interesting fields for them. Than we can use 'Knowledge Based Recommendation' with that feed,
+and provide to user better recommendations. 
+
+
+"""
 # `7.` Using your existing functions, provide the top 10 recommended articles you would provide for the a new user below.  You can test your function against our thoughts to make sure we are all on the same page with how we might make a recommendation.
 
 # In[135]:
@@ -780,8 +790,13 @@ u, s, vt = np.linalg.svd(user_item_matrix) #use the built in to get the three ma
 
 u.shape, s.shape, vt.shape
 
+"""
+**Provide your response here.**
 
-# **Provide your response here.**
+In lessons, we learned about SVD and FunkSVD. The most important difference between them we learned was that we can't use SVD when we have NaN values in our matrix.
+In IBM Watson project, we don't have any NaN values in our user_item_matrix dataset. It contains only 0 and 1 values. So we can traditional SVD instead of FunkSVD here..
+
+"""
 
 # `3.` Now for the tricky part, how do we choose the number of latent features to use?  Running the below cell, you can see that as the number of latent features increases, we obtain a lower error rate on making predictions for the 1 and 0 values in the user-item matrix.  Run the cell below to get an idea of how the accuracy improves as we increase the number of latent features.
 
